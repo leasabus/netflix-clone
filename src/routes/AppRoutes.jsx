@@ -2,21 +2,27 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { Home } from '../components/Home'
 import { NavBar } from '../components/NavBar';
-import { Movies } from '../components/Movies';
-import { TvSeries } from '../components/TvSeries';
+import { AuthContextProvider } from '../context/AuthContext';
+import { Account } from '../pages/Account';
+import { LoginPage } from '../pages/LoginPage';
+import { SignUp } from '../pages/SignUp';
+
 
 
 export const AppRoutes = () => {
     return (
         <>
-            <NavBar />
-            <Routes>
-                <Route path="home" element={<Home />}></Route>
-                <Route path="movies" element={<Movies />}></Route>
-                <Route path="series" element={<TvSeries />}></Route>
-                <Route path="/*" element={<Home />}></Route>
+            <AuthContextProvider>
+                <NavBar />
+                <Routes>
+                    <Route path="home" element={<Home />}></Route>
+                    <Route path="/*" element={<Home />}></Route>
+                    <Route path="/login" element={<LoginPage />}></Route>
+                    <Route path='/signup' element={<SignUp />}></Route>
+                    <Route path='account' element={<Account />}></Route>
 
-            </Routes>
+                </Routes>
+            </AuthContextProvider>
         </>
     )
 }

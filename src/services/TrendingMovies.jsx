@@ -21,9 +21,12 @@ export const TrendingMovies = () => {
 
 
 
+
     return (
         <div className='max-w-[1240px] h-[500px]'>
             <h1 className='text-white text-2xl'>Trending Movies</h1>
+
+
 
 
             <div className='grid grid-cols-3  gap-4 p-4 '>

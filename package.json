@@ -6,10 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "cross-env NODE_ENV=dev node App.jsx"
   },
   "dependencies": {
     "axios": "^1.2.1",
+    "cross-env": "^7.0.3",
+    "firebase": "^9.15.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
