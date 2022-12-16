@@ -11,7 +11,7 @@ export const Footer = () => {
 
             <div className='absolute top-12 left-0 right-0   '>
                 <span span className='text-2xl md:text-3xl xl:text-4xl  flex justify-center items-center text-center p-2' > Developed by Leandro Sabus.</span >
-                <span className='text-2xl flex justify-center items-center text-center mt-4 p-2 text-red-500 font-bold'>Contact Me!</span>
+                <span className='text-3xl flex justify-center items-center text-center mt-4 p-2 text-red-600 font-semibold'>Contact Me</span>
                 <div className='flex flex-row justify-center items-center mt-4 p-4 gap-6'>
                     <a href="https://www.linkedin.com/in/leandro-sabus-a3873515a/" target="_blank">  <AiOutlineLinkedin size={60} className='hover:text-red-500 cursor-pointer' /> </a>
                     <a href="https://github.com/leasabus" target="_blank"> <AiOutlineGithub size={60} className='hover:text-red-500 cursor-pointer' /> </a>

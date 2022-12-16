@@ -33,6 +33,7 @@ export function AuthContextProvider({ children }) {
             setUser(currentUser);
         })
 
+        //este es un metodo para cancelar la suscripcion
         return () => {
             unsubscribe();
         }
