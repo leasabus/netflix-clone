@@ -22,14 +22,14 @@ export const LoginPage = () => {
             navigate("/*")
 
         } catch (error) {
-            console.log("login error")
+
             //msj de error predeterminado por firebase
             setError(error.message)
         }
     }
     return (
         <div className='w-full h-screen'>
-            <img className='hidden sm:block object-cover w-full h-full  ' src={image} alt="" />
+            < img className='hidden sm:block object-cover w-full h-full  ' src={image} alt="" />
             <div className=' fixed bg-black/60 top-0 left-0 w-full h-screen px-4 py-24 z-50 '>
                 <div className=' max-w-[450px] h-[500px] bg-black/70 mx-auto rounded flex items-center pt-10  flex-col   '>
                     <p className='text-white text-3xl font-semibold  '>Login</p>
@@ -51,5 +51,10 @@ export const LoginPage = () => {
                 </div>
             </div>
         </div>
+
+
+
+
+
     )
 }

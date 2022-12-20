@@ -24,7 +24,7 @@ export const PopularMovies = () => {
         <>
             <div className='w-full h-[550px] z-0 '>
                 <div className='w-full h-full   '>
-                    <img className='w-full h-full object-cover md:opacity-60 ' src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`} alt=""
+                    <img className='w-full h-full object-cover opacity-60 ' src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`} alt=""
                     />
 
                 </div>

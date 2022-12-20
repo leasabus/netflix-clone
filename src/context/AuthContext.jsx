@@ -1,10 +1,13 @@
 import { createContext, useContext } from 'react';
 //traemos el servicio auth q creamos en firebase
-import { auth } from '../services/firebase/firebase';
+import { auth, db } from '../services/firebase/firebase';
 //traemos los metodos que necesitamos de firebase
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, updateCurrentUser } from 'firebase/auth';
+//metodos de la data base de firestore
+import { setDoc, doc } from 'firebase/firestore';
 import { useState } from 'react';
 import { useEffect } from 'react';
+
 
 //creamos el context
 const AuthContext = createContext();
@@ -16,7 +19,12 @@ export function AuthContextProvider({ children }) {
 
     //function para crear el user
     function signUp(email, password) {
-        return createUserWithEmailAndPassword(auth, email, password)
+        createUserWithEmailAndPassword(auth, email, password)
+        //cada vez q se logea un usuario, seteamos sus datos en un doc y
+        //guardamos las movies en un array vacio
+        setDoc(doc(db, 'users', email), {
+            savedMovies: []
+        })
     }
     function logIn(email, password) {
         return signInWithEmailAndPassword(auth, email, password)
