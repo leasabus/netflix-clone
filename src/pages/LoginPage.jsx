@@ -1,5 +1,5 @@
 import React from 'react'
-import image from '../assets/bg-login.jpg'
+import image from '../../public/assets/bg-login.jpg'
 import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react';
 import { UserAuth } from '../context/AuthContext';

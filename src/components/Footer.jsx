@@ -1,5 +1,5 @@
 import React from 'react'
-import footer from '../assets/footer-bg.jpg'
+import footer from '../../public/assets/footer-bg.jpg'
 import { AiOutlineLinkedin, AiOutlineGithub, AiOutlineMail } from 'react-icons/ai'
 
 export const Footer = () => {

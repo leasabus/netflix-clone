@@ -34,7 +34,7 @@ export const RowComponent = ({ title, fetchURL, rowID }) => {
 
     return (
         <>
-            <div className='text-white text-2xl flex justify-center items-center p-6'>{title}</div>
+            <div className='text-white font-bold text-2xl flex justify-center items-center p-6'>{title}</div>
             <div className='relative flex items-center group'>
                 <MdChevronLeft
                     onClick={slideLeft}
